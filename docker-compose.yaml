@@ -4,7 +4,7 @@ services:
 
     card-players-united-database-server:
 
-        container_name: card-players-unite-database-server
+        container_name: card-players-united-database-server
         
         image: postgres:14.1-alpine
 
@@ -22,7 +22,7 @@ services:
 
         volumes: 
 
-            - ./volume-data-postgres:/var/lib/postgresql/data
+            - ./volume-data-postgres/database-server:/var/lib/postgresql/data
  
     card-players-united-database-manager:
 
@@ -44,5 +44,5 @@ services:
 
         volumes:
         
-           - ./volume-data-pgadmin4:/var/lib/pgadmin
+            - ./volume-data-postgres/database-admin:/var/lib/pgadmin
             

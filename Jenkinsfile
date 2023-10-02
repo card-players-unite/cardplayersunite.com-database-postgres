@@ -32,20 +32,6 @@ pipeline {
 
         }
 
-        stage('monitor deployments') {
-
-            steps {
-
-                dir('.build-automation/local-execution-management') {
-
-                    sh 'bash ./display-container-usage.bash'
-
-                }                
-
-            }
-
-        }
-        
         stage('cleanup docker again') {
 
             steps {
@@ -59,5 +45,19 @@ pipeline {
             }
 
         }
-        
+
+        stage('monitor deployments') {
+
+            steps {
+
+                dir('.build-automation/local-execution-management') {
+
+                    sh 'bash ./display-container-usage.bash'
+
+                }                
+
+            }
+
+        }
+              
 }}

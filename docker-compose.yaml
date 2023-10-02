@@ -2,9 +2,9 @@ version: "3"
 
 services:
 
-    card-players-united-database-server:
+    card-players-unite-database-server:
 
-        container_name: card-players-united-database-server
+        container_name: card-players-unite-database-server
         
         image: postgres:14.1-alpine
 
@@ -12,9 +12,9 @@ services:
 
         environment:
 
-            - POSTGRES_USER=cardplayersunited
+            - POSTGRES_USER=cardplayersunite
 
-            - POSTGRES_PASSWORD=cardplayersunited
+            - POSTGRES_PASSWORD=cardplayersunite
 
         ports:
 
@@ -24,9 +24,9 @@ services:
 
             - ./volume-data-postgres/database-server:/var/lib/postgresql/data
  
-    card-players-united-database-manager:
+    card-players-unite-database-manager:
 
-        container_name: card-players-united-database-manager
+        container_name: card-players-unite-database-manager
 
         image: dpage/pgadmin4
         
@@ -40,7 +40,7 @@ services:
         
             PGADMIN_DEFAULT_EMAIL: rlmessick@gmail.com
             
-            PGADMIN_DEFAULT_PASSWORD: Oh4X2nsoWeSEytw
+            PGADMIN_DEFAULT_PASSWORD: aggiepride
 
         volumes:
         

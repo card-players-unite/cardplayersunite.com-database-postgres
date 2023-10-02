@@ -18,34 +18,6 @@ pipeline {
 
         }   
 
-        stage('build docker image') {
-
-            steps {
-
-                dir('.build-automation/docker-image-management') {
-
-                    sh 'bash ./build-docker-image-from-source.bash'
-
-                }                
-
-            }
-
-        }      
-        
-        stage('push to dockerhub') {
-
-            steps {
-
-                dir('.build-automation/docker-image-management') {
-
-                    sh 'bash ./push-docker-image-to-dockerhub.bash'
-
-                }                
-
-            }
-
-        }
-
         stage('deploy container') {
 
             steps {

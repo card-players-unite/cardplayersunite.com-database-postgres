@@ -13,7 +13,7 @@ services:
         environment:
 
             - POSTGRES_USER=cardplayersunite
-
+            - POSTGRES_DB=cardplayersunite
             - POSTGRES_PASSWORD=cardplayersunite
 
         ports:
@@ -38,11 +38,11 @@ services:
             
         environment:
         
-            PGADMIN_DEFAULT_EMAIL: rlmessick@gmail.com
+            PGADMIN_DEFAULT_EMAIL: fake@gmail.com
             
             PGADMIN_DEFAULT_PASSWORD: aggiepride
 
         volumes:
         
-            - ./volume-data-postgres/database-admin:/var/lib/pgadmin
+            - /tmp/volume-data-postgres/database-admin:/var/lib/pgadmin
             

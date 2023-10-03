@@ -9,7 +9,7 @@ services:
         image: postgres:14.1-alpine
 
         restart: always
-
+        user: root
         environment:
 
             - POSTGRES_USER=cardplayersunite
@@ -27,7 +27,7 @@ services:
     card-players-unite-database-manager:
 
         container_name: card-players-unite-database-manager
-
+        user: root
         image: dpage/pgadmin4
         
         restart: always

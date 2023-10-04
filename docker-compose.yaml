@@ -22,7 +22,7 @@ services:
 
         volumes: 
 
-            - ./volume-data-postgres/database-server:/var/lib/postgresql/data
+            - ./vol1ume-data-postgres/database-server:/var/lib/postgresql/data
  
     card-players-unite-database-manager:
 
@@ -44,5 +44,5 @@ services:
 
         volumes:
         
-            - /tmp/volume-data-postgres/database-admin:/var/lib/pgadmin
+            - .//vol1ume-data-postgres/database-admin:/var/lib/pgadmin
             
